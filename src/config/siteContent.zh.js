@@ -32,8 +32,7 @@ export const siteContentZh = {
         title: "WorldRenderer: Long-Horizon 3D World Rendering with Video Diffusion Models",
         authors:
           "Li Yin, Ming Lin, Yuzhen Wang, Haoran Feng, Zhenghao Song, Yang-Tian Sun, Zehuan Huang, Lu Sheng",
-        venue:
-          "ECCV 2026 Full Submission（06 Mar 2026, China Standard Time）· Subject Area: Image and video synthesis and generation · Student Paper · Contribution Type: Algorithms/General",
+        venue: "在投 ECCV 2026（投稿时间：06 Mar 2026）",
         abstract:
           "我们提出 WorldRenderer，一个面向长时程 3D 世界渲染的框架，可生成时间一致且几何连贯的视频，解决以往方法的关键局限。具体来说，WorldRenderer 采用统一的 geometry-memory 编码，在共享控制空间中联合表示几何条件与长期世界记忆，从而在保持结构保真度的同时维持时间一致性。此外，我们提出 GMem-Forcing 蒸馏策略，通过 geometry-memory 自回滚在训练中显式约束长时程一致性，缓解误差累积并实现稳定的实时流式视频生成。大量实验表明，相比已有方法，WorldRenderer 在几何连贯性、时间一致性和实时性能上均有显著提升，为长时程 3D 世界渲染提供了有效方案。",
         hideAuthors: true,

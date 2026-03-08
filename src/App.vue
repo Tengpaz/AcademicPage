@@ -22,8 +22,7 @@ watch(language, (lang) => {
 
 onMounted(() => {
   const stored = localStorage.getItem("site-lang");
-  const browserLang = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
-  language.value = stored || browserLang;
+  language.value = stored || "en";
 });
 </script>
 
