@@ -8,6 +8,24 @@ const props = defineProps({
   }
 });
 
+const avatarSrc = computed(() => {
+  const src = props.profile.avatar;
+
+  if (!src) {
+    return "";
+  }
+
+  if (/^(https?:)?\/\//.test(src) || src.startsWith("data:")) {
+    return src;
+  }
+
+  if (src.startsWith("/")) {
+    return `${import.meta.env.BASE_URL}${src.slice(1)}`;
+  }
+
+  return src;
+});
+
 const contactIcons = computed(() => {
   const email = props.profile.contact.email;
   const github = props.profile.contact.github;
@@ -38,7 +56,7 @@ const contactIcons = computed(() => {
 
 <template>
   <section class="hero reveal" style="--delay: 0.15s">
-    <img class="avatar" :src="props.profile.avatar" alt="Profile avatar" />
+    <img class="avatar" :src="avatarSrc" alt="Profile avatar" />
     <div class="hero-text">
       <p class="role">{{ props.profile.role }}</p>
       <h1>{{ props.profile.name }}</h1>
