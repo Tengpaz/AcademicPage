@@ -1,5 +1,7 @@
 <script setup>
-defineProps({
+const emit = defineEmits(["change-language"]);
+
+const props = defineProps({
   content: {
     type: Object,
     required: true
@@ -10,16 +12,13 @@ defineProps({
   }
 });
 
-const emit = defineEmits(["change-language"]);
 </script>
 
 <template>
   <header class="topbar reveal" style="--delay: 0.05s">
     <div class="brand">{{ content.siteBrand }}</div>
     <nav class="nav-links">
-      <a href="#about">{{ content.navAbout }}</a>
-      <a href="#publications">{{ content.navPubs }}</a>
-      <a href="#contact">{{ content.navContact }}</a>
+      <a v-for="item in content.navItems" :key="`${item.href}-${item.label}`" :href="item.href">{{ item.label }}</a>
     </nav>
     <div class="lang-switch" role="group" aria-label="Language switcher">
       <button class="lang-btn" :class="{ active: language === 'zh' }" type="button" @click="emit('change-language', 'zh')">

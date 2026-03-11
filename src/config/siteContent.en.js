@@ -1,15 +1,14 @@
 export const siteContentEn = {
   siteBrand: "Academic Homepage",
-  navAbout: "About",
-  navPubs: "Selected Paper",
-  navContact: "Contact",
+  navItems: [
+    { label: "About", href: "#about" },
+    { label: "News", href: "#news" },
+    { label: "Selected Paper", href: "#publications" }
+  ],
   paperLink: "Paper",
-  contactTitle: "Contact",
-  contactLocationLabel: "Location:",
-  contactPhoneLabel: "Phone:",
-  contactWechatLabel: "WeChat:",
   sectionTitles: {
     about: "About Me",
+    news: "News",
     publications: "Selected Paper"
   },
   profile: {
@@ -26,6 +25,20 @@ export const siteContentEn = {
       education: "Beihang University · Software Engineering · Undergraduate (2023.09 - Present)",
       interests: "Research Interests: computer vision, world models, long-video generation, 3D-conditioned generation"
     },
+    news: [
+      {
+        date: "Mar 2026",
+        text: "Submitted the paper WorldRenderer to ECCV 2026."
+      },
+      {
+        date: "Nov 2025",
+        text: "Started research on long-horizon video generation and 3D-conditioned control."
+      },
+      {
+        date: "Oct 2025",
+        text: "Joined Prof. Sheng Lu's research group as a research intern."
+      }
+    ],
     publicationsUpdated: "Updated: 2026",
     publications: [
       {

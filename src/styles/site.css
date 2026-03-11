@@ -228,6 +228,39 @@ h2 {
   font-size: 0.95rem;
 }
 
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(31, 41, 51, 0.08);
+}
+
+.news-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.news-date {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.news-item p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -242,10 +275,59 @@ h2 {
 }
 
 .publication-list {
-  padding-left: 1.2rem;
+  list-style: none;
+  padding: 0;
   margin: 0;
   display: grid;
   gap: 1rem;
+}
+
+.publication-item {
+  display: block;
+}
+
+.publication-item.has-preview {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.paper-preview {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px dashed var(--line);
+  background: rgba(255, 255, 255, 0.7);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.paper-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.paper-preview span {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.paper-content {
+  min-width: 0;
+}
+
+.paper-abstract {
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .publication-list h3 {
@@ -295,40 +377,6 @@ h2 {
   fill: currentColor;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
-}
-
-.project-item {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 0.95rem;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.project-item h3 {
-  margin-bottom: 0.35rem;
-}
-
-.project-item p {
-  color: var(--ink-soft);
-  margin-top: 0;
-}
-
-.contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.45rem;
-}
-
-.contact-list span {
-  font-weight: 600;
-}
-
 .footer {
   margin-top: 1rem;
   text-align: center;
@@ -359,9 +407,19 @@ h2 {
     max-width: 130px;
   }
 
-  .project-grid {
+  .publication-item.has-preview {
     grid-template-columns: 1fr;
   }
+
+  .paper-preview {
+    max-width: 320px;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
 }
 
 @media (max-width: 540px) {

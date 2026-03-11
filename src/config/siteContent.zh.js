@@ -1,15 +1,14 @@
 export const siteContentZh = {
   siteBrand: "个人学术主页",
-  navAbout: "个人介绍",
-  navPubs: "Selected Paper",
-  navContact: "联系方式",
+  navItems: [
+    { label: "个人介绍", href: "#about" },
+    { label: "动态", href: "#news" },
+    { label: "代表作", href: "#publications" }
+  ],
   paperLink: "论文链接",
-  contactTitle: "联系方式",
-  contactLocationLabel: "所在地：",
-  contactPhoneLabel: "电话：",
-  contactWechatLabel: "微信：",
   sectionTitles: {
     about: "关于我",
+    news: "最新动态",
     publications: "代表作"
   },
   profile: {
@@ -26,6 +25,20 @@ export const siteContentZh = {
       education: "北京航空航天大学 · 软件工程 · 本科在读（2023.09 - 至今）",
       interests: "研究兴趣：计算机视觉、世界模型、长视频生成、3D 条件控制生成"
     },
+    news: [
+      {
+        date: "2026年3月",
+        text: "论文 WorldRenderer 投稿至 ECCV 2026。"
+      },
+      {
+        date: "2025年11月",
+        text: "开始长时程视频生成与 3D 条件控制方向的有关研究。"
+      },
+      {
+        date: "2025年10月",
+        text: "进入盛律老师课题组实习"
+      }
+    ],
     publicationsUpdated: "更新于：2026",
     publications: [
       {

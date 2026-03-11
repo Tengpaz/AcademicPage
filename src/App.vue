@@ -2,6 +2,7 @@
 import { computed, onMounted, ref, watch } from "vue";
 import AboutSection from "./components/AboutSection.vue";
 import HeroSection from "./components/HeroSection.vue";
+import NewsSection from "./components/NewsSection.vue";
 import PublicationsSection from "./components/PublicationsSection.vue";
 import SiteFooter from "./components/SiteFooter.vue";
 import SiteTopBar from "./components/SiteTopBar.vue";
@@ -36,6 +37,7 @@ onMounted(() => {
     <main>
       <HeroSection :profile="content.profile" />
       <AboutSection :title="content.sectionTitles.about" :profile="content.profile" />
+      <NewsSection :title="content.sectionTitles.news" :items="content.profile.news" />
       <PublicationsSection
         :title="content.sectionTitles.publications"
         :profile="content.profile"
