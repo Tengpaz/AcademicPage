@@ -1,10 +1,16 @@
 <script setup>
-defineProps({
+import { ref } from "vue";
+import JourneyNoteDialog from "../components/JourneyNoteDialog.vue";
+
+const props = defineProps({
   content: {
     type: Object,
     required: true
   }
 });
+
+const activeEntry = ref(null);
+const activeNoteIndex = ref(0);
 
 function renderContent(text) {
   // 1. Escape HTML special chars to prevent injection
@@ -20,6 +26,20 @@ function renderContent(text) {
   );
   // 3. Convert newlines to <br>
   return linked.replace(/\n/g, "<br>");
+}
+
+function openNote(entry, index) {
+  activeEntry.value = entry;
+  activeNoteIndex.value = index;
+}
+
+function closeNoteDialog() {
+  activeEntry.value = null;
+  activeNoteIndex.value = 0;
+}
+
+function changeActiveNote(index) {
+  activeNoteIndex.value = index;
 }
 </script>
 
@@ -45,8 +65,29 @@ function renderContent(text) {
         </div>
         <h3>{{ entry.title }}</h3>
         <p class="journey-entry-content" v-html="renderContent(entry.content)"></p>
+        <div v-if="entry.notes && entry.notes.length" class="journey-entry-notes">
+          <span class="journey-notes-label">{{ props.content.journeyUi.notesLabel }}</span>
+          <button
+            v-for="(note, noteIndex) in entry.notes"
+            :key="note.file"
+            class="journey-note-chip"
+            type="button"
+            @click="openNote(entry, noteIndex)"
+          >
+            {{ note.title }}
+          </button>
+        </div>
       </article>
     </div>
+
+    <JourneyNoteDialog
+      :open="Boolean(activeEntry)"
+      :entry="activeEntry"
+      :active-note-index="activeNoteIndex"
+      :ui="props.content.journeyUi"
+      @close="closeNoteDialog"
+      @change-note="changeActiveNote"
+    />
   </main>
 </template>
 

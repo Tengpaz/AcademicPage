@@ -13,13 +13,28 @@ export const siteContentZh = {
     publications: "代表作",
     journey: "科研足迹"
   },
+  journeyUi: {
+    notesLabel: "关联笔记",
+    noteListTitle: "本条目笔记",
+    tocTitle: "目录",
+    loading: "正在加载笔记...",
+    empty: "暂无笔记内容",
+    failed: "笔记加载失败，请稍后重试。",
+    close: "关闭"
+  },
   journeyIntro: "写给未来的自己，也写给同路人。",
   journeyEntries: [
     {
       date: "2026年3月",
       title: "尝试补齐具身智能基础知识",
       tags: ["具身智能", "科研入门"],
-      content: "参考学习资料：\nhttps://scalelab-sjtu.github.io/embodied_guide.html"
+      content: "参考学习资料：\n计算机视觉入门斯坦福课程 https://www.bilibili.com/video/BV1YJ3PzLEiW/\nhttps://scalelab-sjtu.github.io/embodied_guide.html",
+      notes: [
+        {
+          title: "具身智能学习导航",
+          file: "zh/embodied-ai-guide.md"
+        }
+      ]
     },
     {
       date: "2026年3月",
@@ -31,7 +46,13 @@ export const siteContentZh = {
       date: "2025年6月",
       title: "寻找科研实习机会",
       tags: ["科研起点"],
-      content: "成绩方面可能很难取得显著提升了，但是科研经历还是十分匮乏。于是开始寻找科研机会，感谢接纳自己的老师。"
+      content: "成绩方面可能很难取得显著提升了，但是科研经历还是十分匮乏。于是开始寻找科研机会，感谢接纳自己的老师。",
+      notes: [
+        {
+          title: "寻找科研机会的准备清单",
+          file: "zh/research-internship-search.md"
+        }
+      ]
     }
   ],
   profile: {

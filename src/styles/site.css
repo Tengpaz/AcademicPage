@@ -496,3 +496,296 @@ h2 {
 .journey-entry-content a:hover {
   border-bottom-style: solid;
 }
+
+.journey-entry-notes {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.journey-notes-label {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.journey-note-chip {
+  border: 1px solid rgba(21, 94, 99, 0.16);
+  background: rgba(21, 94, 99, 0.08);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.38rem 0.82rem;
+  font-size: 0.84rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.journey-note-chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(21, 94, 99, 0.35);
+  background: rgba(21, 94, 99, 0.12);
+}
+
+.note-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(15, 28, 35, 0.34);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+}
+
+.note-dialog-shell {
+  width: min(1440px, 100%);
+  height: calc(100vh - 2rem);
+  margin: 0 auto;
+  border: 1px solid rgba(31, 41, 51, 0.1);
+  border-radius: 26px;
+  background: rgba(249, 250, 246, 0.96);
+  box-shadow: 0 24px 60px rgba(15, 28, 35, 0.2);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+
+.note-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  padding: 1.2rem 1.25rem 1rem;
+  border-bottom: 1px solid rgba(31, 41, 51, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.65));
+}
+
+.note-dialog-header h2 {
+  margin: 0.2rem 0 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.note-dialog-kicker {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.note-dialog-close {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.note-dialog-layout {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr) 230px;
+}
+
+.note-sidebar {
+  min-height: 0;
+  overflow: auto;
+  padding: 1.1rem 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.note-sidebar-left {
+  border-right: 1px solid rgba(31, 41, 51, 0.08);
+}
+
+.note-sidebar-right {
+  border-left: 1px solid rgba(31, 41, 51, 0.08);
+}
+
+.note-sidebar-title {
+  margin: 0 0 0.8rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.note-switcher,
+.toc-link {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 0.55rem 0.65rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.note-switcher + .note-switcher,
+.toc-link + .toc-link {
+  margin-top: 0.3rem;
+}
+
+.note-switcher:hover,
+.toc-link:hover {
+  background: rgba(21, 94, 99, 0.08);
+  color: var(--ink);
+}
+
+.note-switcher.active {
+  background: rgba(21, 94, 99, 0.12);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.toc-link.level-2 {
+  padding-left: 1rem;
+}
+
+.toc-link.level-3 {
+  padding-left: 1.35rem;
+}
+
+.note-article-wrap {
+  min-height: 0;
+  overflow: auto;
+  padding: 1.6rem clamp(1rem, 3vw, 2.4rem) 2rem;
+}
+
+.note-state {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.note-article {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.note-article h1,
+.note-article h2,
+.note-article h3,
+.note-article h4 {
+  scroll-margin-top: 1rem;
+}
+
+.note-article h1 {
+  margin-bottom: 0.75rem;
+}
+
+.note-article h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+  font-size: 1.5rem;
+}
+
+.note-article h3 {
+  margin-top: 1.3rem;
+  margin-bottom: 0.45rem;
+  font-size: 1.1rem;
+}
+
+.note-article p,
+.note-article li {
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+}
+
+.note-article ul,
+.note-article ol {
+  padding-left: 1.2rem;
+}
+
+.note-article a {
+  color: var(--accent-2);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(180, 95, 29, 0.5);
+  word-break: break-word;
+}
+
+.note-article blockquote {
+  margin: 1rem 0;
+  padding: 0.2rem 0 0.2rem 0.9rem;
+  border-left: 3px solid rgba(21, 94, 99, 0.35);
+  color: var(--ink-soft);
+}
+
+.note-article code {
+  padding: 0.08rem 0.35rem;
+  border-radius: 6px;
+  background: rgba(31, 41, 51, 0.06);
+  font-size: 0.88em;
+}
+
+@media (max-width: 1100px) {
+  .note-dialog-layout {
+    grid-template-columns: 210px minmax(0, 1fr) 180px;
+  }
+}
+
+@media (max-width: 900px) {
+  .note-dialog-backdrop {
+    padding: 0.6rem;
+  }
+
+  .note-dialog-shell {
+    height: calc(100vh - 1.2rem);
+    border-radius: 20px;
+  }
+
+  .note-dialog-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+
+  .note-sidebar-left,
+  .note-sidebar-right {
+    border: 0;
+    border-bottom: 1px solid rgba(31, 41, 51, 0.08);
+  }
+
+  .note-sidebar {
+    padding: 0.9rem 1rem;
+  }
+
+  .note-sidebar-left {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .note-sidebar-left .note-sidebar-title,
+  .note-sidebar-right .note-sidebar-title {
+    width: 100%;
+  }
+
+  .note-switcher {
+    width: auto;
+  }
+
+  .note-sidebar-right {
+    border-top: 1px solid rgba(31, 41, 51, 0.08);
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .journey-entry-notes {
+    align-items: start;
+  }
+
+  .note-dialog-header {
+    padding: 1rem;
+  }
+
+  .note-dialog-close {
+    padding-inline: 0.8rem;
+  }
+
+  .note-article-wrap {
+    padding: 1rem 1rem 1.3rem;
+  }
+}

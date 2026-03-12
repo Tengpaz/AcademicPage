@@ -13,13 +13,28 @@ export const siteContentEn = {
     publications: "Selected Paper",
     journey: "Research Journey"
   },
+  journeyUi: {
+    notesLabel: "Related Notes",
+    noteListTitle: "Notes for This Entry",
+    tocTitle: "Contents",
+    loading: "Loading note...",
+    empty: "No note content available.",
+    failed: "Failed to load the note. Please try again later.",
+    close: "Close"
+  },
   journeyIntro: "Written for my future self, and for fellow travelers.",
   journeyEntries: [
     {
       date: "Mar 2026",
       title: "Catching Up on Embodied AI Fundamentals",
       tags: ["Embodied AI", "Research Basics"],
-      content: "Reference learning material:\nhttps://scalelab-sjtu.github.io/embodied_guide.html"
+      content: "Reference learning material:\nhttps://scalelab-sjtu.github.io/embodied_guide.html",
+      notes: [
+        {
+          title: "Embodied AI Learning Guide",
+          file: "en/embodied-ai-guide.md"
+        }
+      ]
     },
     {
       date: "Mar 2026",
@@ -31,7 +46,13 @@ export const siteContentEn = {
       date: "Jun 2025",
       title: "Looking for a Research Internship",
       tags: ["Research Start"],
-      content: "It was hard to significantly improve my GPA at that point, but my research experience was still very limited. So I started looking for research opportunities — grateful to the advisor who took a chance on me."
+      content: "It was hard to significantly improve my GPA at that point, but my research experience was still very limited. So I started looking for research opportunities — grateful to the advisor who took a chance on me.",
+      notes: [
+        {
+          title: "Preparation Checklist for Research Opportunities",
+          file: "en/research-internship-search.md"
+        }
+      ]
     }
   ],
   profile: {
