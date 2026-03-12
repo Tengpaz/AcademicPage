@@ -16,9 +16,15 @@ const props = defineProps({
 
 <template>
   <header class="topbar reveal" style="--delay: 0.05s">
-    <div class="brand">{{ content.siteBrand }}</div>
+    <div class="brand">
+      <RouterLink to="/" class="brand-link">{{ content.siteBrand }}</RouterLink>
+    </div>
     <nav class="nav-links">
-      <a v-for="item in content.navItems" :key="`${item.href}-${item.label}`" :href="item.href">{{ item.label }}</a>
+      <RouterLink
+        v-for="item in content.navItems"
+        :key="item.label"
+        :to="item.to"
+      >{{ item.label }}</RouterLink>
     </nav>
     <div class="lang-switch" role="group" aria-label="Language switcher">
       <button class="lang-btn" :class="{ active: language === 'zh' }" type="button" @click="emit('change-language', 'zh')">

@@ -1,16 +1,39 @@
 export const siteContentEn = {
   siteBrand: "Academic Homepage",
   navItems: [
-    { label: "About", href: "#about" },
-    { label: "News", href: "#news" },
-    { label: "Selected Paper", href: "#publications" }
+    { label: "About", to: { path: "/", hash: "#about" } },
+    { label: "News", to: { path: "/", hash: "#news" } },
+    { label: "Selected Paper", to: { path: "/", hash: "#publications" } },
+    { label: "Research Journey", to: "/journey" }
   ],
   paperLink: "Paper",
   sectionTitles: {
     about: "About Me",
     news: "News",
-    publications: "Selected Paper"
+    publications: "Selected Paper",
+    journey: "Research Journey"
   },
+  journeyIntro: "Written for my future self, and for fellow travelers.",
+  journeyEntries: [
+    {
+      date: "Mar 2026",
+      title: "Catching Up on Embodied AI Fundamentals",
+      tags: ["Embodied AI", "Research Basics"],
+      content: "Reference learning material:\nhttps://scalelab-sjtu.github.io/embodied_guide.html"
+    },
+    {
+      date: "Mar 2026",
+      title: "First Paper Submitted to ECCV 2026",
+      tags: ["Paper Submission", "Video Generation"],
+      content: "During the project polishing phase, learned various experimental workflows and paper-writing techniques."
+    },
+    {
+      date: "Jun 2025",
+      title: "Looking for a Research Internship",
+      tags: ["Research Start"],
+      content: "It was hard to significantly improve my GPA at that point, but my research experience was still very limited. So I started looking for research opportunities — grateful to the advisor who took a chance on me."
+    }
+  ],
   profile: {
     role: "Software Engineering Undergraduate at Beihang University",
     name: "Yuzhen Wang",

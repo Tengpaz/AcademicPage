@@ -1,16 +1,39 @@
 export const siteContentZh = {
   siteBrand: "个人学术主页",
   navItems: [
-    { label: "个人介绍", href: "#about" },
-    { label: "动态", href: "#news" },
-    { label: "代表作", href: "#publications" }
+    { label: "个人介绍", to: { path: "/", hash: "#about" } },
+    { label: "动态", to: { path: "/", hash: "#news" } },
+    { label: "代表作", to: { path: "/", hash: "#publications" } },
+    { label: "科研足迹", to: "/journey" }
   ],
   paperLink: "论文链接",
   sectionTitles: {
     about: "关于我",
     news: "最新动态",
-    publications: "代表作"
+    publications: "代表作",
+    journey: "科研足迹"
   },
+  journeyIntro: "写给未来的自己，也写给同路人。",
+  journeyEntries: [
+    {
+      date: "2026年3月",
+      title: "尝试补齐具身智能基础知识",
+      tags: ["具身智能", "科研入门"],
+      content: "参考学习资料：\nhttps://scalelab-sjtu.github.io/embodied_guide.html"
+    },
+    {
+      date: "2026年3月",
+      title: "第一篇论文投稿 ECCV 2026",
+      tags: ["论文投稿", "视频生成"],
+      content: "项目打磨期间，学习各种实验流程，论文撰写技巧。"
+    },
+    {
+      date: "2025年6月",
+      title: "寻找科研实习机会",
+      tags: ["科研起点"],
+      content: "成绩方面可能很难取得显著提升了，但是科研经历还是十分匮乏。于是开始寻找科研机会，感谢接纳自己的老师。"
+    }
+  ],
   profile: {
     role: "北京航空航天大学软件工程本科生",
     name: "王宇祯",
