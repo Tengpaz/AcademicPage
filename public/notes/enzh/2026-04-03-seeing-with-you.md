@@ -1,6 +1,7 @@
 # Seeing with You 与你同视
 
 > Perception–Reasoning Coevolution for Multimodal Reasoning
+> 
 > 面向多模态推理的感知推理协同演化
 
 [论文](https://arxiv.org/abs/2603.28618)
@@ -32,11 +33,15 @@ To concretely examine this bottleneck, we conduct a diagnostic analysis using GR
 ![[Pasted image 20260403154830.png]]
 
 > Figure 1: Diagnostic (诊断) analysis of GRPO on WeMath (Qiao et al., 2025). 
+> 
 > Left: GRPO reduces reasoning errors much more than perception errors. 
+> 
 > Right: a representative failure case caused by incorrect perception.
 > 
 > 图1：在WeMath任务上对GRPO方法的诊断分析。
+> 
 > 左：GRPO更多地减少了推理错误，更少地减少感知错误。
+> 
 > 右：感知错误造成的一个表达错误案例。
 
 We attribute this bottleneck to outcome-only RLVR with a shared reward updating both perception and reasoning. This blurs credit assignment and improves reasoning patterns without reliably improving visual evidence extraction.
@@ -135,11 +140,13 @@ $$
 The expectation is approximated by the empirical (经验的) mean of the verifier scores over $G_S$ sampled Solver rollouts (输出) conditioned on $(I^S,q,c_k,r_S)$. This reward favors captions that help downstream solving and suppresses captions judged as leaking the answer.
 
 期望用取得的 $G_S$ 个以 $(I^S, q, c_k, r_S)$ 为条件的解决者输出的验证器得分的经验均值估算。这个奖励偏好能够帮助下游解决问题的说明并抑制了被判定为泄漏答案的说明。
+
 ### Solver: Evidence-Conditioned Reasoning 解决者：基于证明的推理
 
 The Solver produces a short final answer by reasoning over the question and the Observer’s caption, with the image provided when available. Conditioning on $c$ encourages explicit evidence-driven reasoning, while image input helps recover global structure or complex geometric relations that are difficult to fully convey in text. Formally, given a caption $c$, the Solver samples $\hat{a}∼\pi_{\theta}(\cdot | I^S,q,c,r_S)$.
 
 解决者基于问题、观察者的说明、图片（如果有）推理生成一个简短的最终答案。以 $c$ 为条件鼓励显式线索驱动的推理，图片输入可以帮助还原文字难以完全传达的全局结构或复杂的几何关系。正式地说，给定一个说明 $c$，解决者输出 $\hat{a}∼\pi_{\theta}(\cdot | I^S, q, c, r_S)$。
+
 #### Solver reward 解决者奖励
 
 We define the correctness reward via the verifier as $r^{\mathrm{acc}} = V(\hat{a},a)$. In addition, $r^{\mathrm{format}} \in [0,1]$ measures whether the response strictly follows the required format. We compute it with a simple rule-based checker as $r^{\mathrm{format}} = \mathrm{FormatScore}(\hat{a})$. The Solver is rewarded for both correctness and basic format compliance (合规): 

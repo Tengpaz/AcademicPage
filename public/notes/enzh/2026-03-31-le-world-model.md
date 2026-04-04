@@ -1,6 +1,7 @@
 # LeWorldModel
 
 > Stable End-to-End Joint-Embedding Predictive Architecture from Pixels
+> 
 > 从像素到稳定端到端联合嵌入预测架构
 
 [论文](https://arxiv.org/pdf/2603.19312v1)
@@ -19,6 +20,7 @@ JEPAs提供了一个引人注目的可在紧凑的潜在空间中学习世界模
 控制以外，我们展示出了LeWM能够通过探测物理量编码富有意义的物理结构的能力。更多的评估保证了这个模型能可靠检测出物理不可信的事件。
 
 > **TL;DR:** LeWM is a JEPA-based world model that avoids representation collapse using a simple Gaussian regularizer (SIGReg), trains end-to-end from pixels with only two loss terms, and achieves competitive control performance at a fraction of the compute cost.
+> 
 > LeWM是一个依靠简单高斯正则化项避免了表征坍缩的基于JEPA架构的世界模型。它仅使用两个损失项实现从像素到端到端的训练，并在减倍的计算成本上表现出了有竞争力的控制能力。
 
 ## Approach 方法

@@ -8,6 +8,7 @@
 [演示](https://ai-innovator.open-moss.com/)
 
 > TL;DR: We treat **scientific taste** as a learnable objective and show that Reinforcement Learning from Community Feedback can train models to judge and propose higher-impact scientific ideas.
+> 
 > 我们将研究品味看作一个可以学习的对象，展示了从社区反馈进行强化学习可以训练模型去评估并提出一个具有高影响力的研究想法。
 
 ## Abstract 摘要
@@ -53,8 +54,11 @@ Experiments show that Scientific Judge outperforms strong LLM baselines such as 
 ![](https://tongjingqi.github.io/AI-Can-Learn-Scientific-Taste/static/images/formulation.png)
 
 > **The Core Thesis**
+> 
 > Scientific taste is not mystical or purely subjective. Large-scale community feedback can be converted into matched preferences that enable models to learn scientific judgement and improve scientific ideation (构思).
+> 
 > **核心理念**
+> 
 > 科学品味并非神秘或完全客观。大规模的社区反馈可以被转化为匹配的偏好，从而使得模型得以学习到科研评估并改善研究构思。
 
 ## SciJudgeBench and Main Results SciJudgeBench和主要结果
@@ -77,6 +81,7 @@ SciJudgeBench由2024年发布的2.1M arXiv论文构建，打造了共696758对�
 在SciJudgeBench上做科学评估和OOD设定
 
 > We report pairwise accuracy with position-swap consistency on in-domain and out-of-domain evaluations.
+> 
 > 我们报告了在领域内和领域外评估中具有位置交换一致性的成对准确性
 
 | Models                    | In-Domain | Future-Year | ICLR Review | bioRxiv  |
@@ -117,11 +122,13 @@ SciJudgeBench由2024年发布的2.1M arXiv论文构建，打造了共696758对�
 ![Scaling trends for scientific judgement across model size and training data.](https://tongjingqi.github.io/AI-Can-Learn-Scientific-Taste/static/images/scaling_curve.png)
 
 > Scaling trends for scientific judgement across model size and training data.
+> 
 > 在模型大小和训练数据上的科学评估能力的扩展趋势
 
 ![Scientific Thinker win rates after preference alignment.](https://tongjingqi.github.io/AI-Can-Learn-Scientific-Taste/static/images/thinker_winrate.png)
 
 > Scientific Thinker win rates after preference alignment.
+> 
 > 科学思考模型在偏好对齐后的胜率
 
 ### Results 结论
