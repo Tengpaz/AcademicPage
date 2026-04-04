@@ -25,6 +25,34 @@ export const siteContentEn = {
   journeyIntro: "Written for my future self, and for fellow travelers.",
   journeyEntries: [
     {
+      date: "2026年4月",
+      title: "Beginning Paper Reading Daily",
+      tags: ["Paper Reading", "Research Habits"],
+      content: "Trying to translate one paper every day without taking notes (also not clear how to take proper reading notes before formally getting into research).",
+      notes: [
+        {
+          title: "March 30th, 2026 - 7-hour Interview with Xie Saining",
+          file: "enzh/2026-03-30-xie-saining-interview.md"
+        },
+        {
+          title: "March 31st, 2026 - LeWorldModel",
+          file: "enzh/2026-03-31-le-world-model.md"
+        },
+        {
+          title: "April 1st, 2026 - AI Can Learn Scientific Taste",
+          file: "enzh/2026-04-01-ai-can-learn-scientific-taste.md"
+        },
+        {
+          title: "April 2nd, 2026 - FIPO",
+          file: "enzh/2026-04-02-fipo.md"
+        },
+        {
+          title: "April 3rd, 2026 - Seeing with You",
+          file: "enzh/2026-04-03-seeing-with-you.md"
+        }
+      ]
+    },
+    {
       date: "Mar 2026",
       title: "Catching Up on Embodied AI Fundamentals",
       tags: ["Embodied AI", "Research Basics"],

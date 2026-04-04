@@ -25,6 +25,34 @@ export const siteContentZh = {
   journeyIntro: "写给未来的自己，也写给同路人。",
   journeyEntries: [
     {
+      date: "2026年4月",
+      title: "开始Paper Reading Daily",
+      tags: ["论文阅读", "科研习惯"],
+      content: "试着每天翻译一篇论文，不做笔记（在没能正式入门科研之前也不明确如何正确做论文的阅读笔记）。",
+      notes: [
+        {
+          title: "2026年3月30日-谢赛宁7小时访谈",
+          file: "enzh/2026-03-30-xie-saining-interview.md"
+        },
+        {
+          title: "2026年3月31日-LeWorldModel",
+          file: "enzh/2026-03-31-le-world-model.md"
+        },
+        {
+          title: "2026年4月1日-AI Can Learn Scientific Taste",
+          file: "enzh/2026-04-01-ai-can-learn-scientific-taste.md"
+        },
+        {
+          title: "2026年4月2日-FIPO",
+          file: "enzh/2026-04-02-fipo.md"
+        },
+        {
+          title: "2026年4月3日-Seeing with You",
+          file: "enzh/2026-04-03-seeing-with-you.md"
+        }
+      ]
+    },
+    {
       date: "2026年3月",
       title: "尝试补齐具身智能基础知识",
       tags: ["具身智能", "科研入门"],
