@@ -2,6 +2,13 @@
 import { computed, nextTick, onBeforeUnmount, ref, watch } from "vue";
 import DOMPurify from "dompurify";
 import { marked } from "marked";
+import markedKatex from "marked-katex-extension";
+import "katex/dist/katex.min.css";
+
+marked.use(markedKatex({
+  throwOnError: false,
+  nonStandard: true
+}));
 
 const props = defineProps({
   open: {
